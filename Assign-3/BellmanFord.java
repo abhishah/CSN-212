@@ -87,9 +87,14 @@ public class BellmanFord
  
         System.out.println("Enter the source vertex");
         source = scanner.nextInt();
- 
+        
+        long startTime = System.currentTimeMillis();
         BellmanFord bellmanford = new BellmanFord(numberofvertices);
         bellmanford.BellmanFordEvaluation(source, adjacencymatrix);
+        long endTime = System.currentTimeMillis();
+        long execTime = endTime-startTime;
+        System.out.println("Execution Time: "+execTime+" start "+startTime+" end "+endTime);
+
         scanner.close();	
     }
 }
